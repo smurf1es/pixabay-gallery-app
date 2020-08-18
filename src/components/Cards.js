@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import { Key } from '../key';
+
 const Cards = () => {
   const [images, setImages] = useState([]);
-  const key = '16386444-091359d04dda414c8b6fa03f0';
-  const url = `https://pixabay.com/api/?key=${key}&q=switzerland&image_type=photo&pretty=true`;
+  const url = `https://pixabay.com/api/?key=${Key}&q=switzerland&image_type=photo&pretty=true`;
 
   useEffect(() => {
     async function getImages() {
